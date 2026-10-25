@@ -1,6 +1,6 @@
 // Keeps the game playable offline. Bump VERSION when files change.
-const VERSION = 'cat-cafe-v1';
-const FILES = ['./', './index.html', './manifest.json', './icon-180.png', './icon-192.png', './icon-512.png'];
+const VERSION = 'cat-cafe-v2';
+const FILES = ['./', './index.html', './manifest.json', './icon-180.png', './icon-192.png', './icon-512.png', './three.min.js'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
